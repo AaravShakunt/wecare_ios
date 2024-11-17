@@ -314,82 +314,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-7B-nOb">
-                                <rect key="frame" x="20" y="64" width="353" height="273.33333333333331"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="ls7-7S-AlS">
+                                <rect key="frame" x="20" y="64" width="353" height="626.66666666666663"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBW-f8-N1X">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-7B-nOb">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="273.33333333333331"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At WeCare, we provide you with exervise and recommendations based on postpartum requirements" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8A-Vo-Si4">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBW-f8-N1X">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="61"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-eJ-eyg">
-                                        <rect key="frame" x="0.0" y="120" width="353" height="60"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-bz-SoY">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4J-U1-CYz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At WeCare, we provide you with exervise and recommendations based on postpartum requirements" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8A-Vo-Si4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="61"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yd5-De-eCd">
-                                                        <rect key="frame" x="187" y="0.0" width="166" height="30"/>
-                                                        <menu key="menu" id="bWq-KI-3k8">
-                                                            <children>
-                                                                <command title="Item 1" id="WtH-nn-PIX"/>
-                                                                <command title="Item 2" id="PHP-tK-Nab"/>
-                                                            </children>
-                                                        </menu>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="VFJ-rN-hro">
-                                                <rect key="frame" x="0.0" y="30" width="353" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-eJ-eyg">
+                                                <rect key="frame" x="0.0" y="120" width="353" height="60"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZa-o5-Ptj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgM-7q-g0O">
-                                                        <rect key="frame" x="187" y="0.0" width="166" height="30"/>
-                                                        <menu key="menu" id="tL6-h4-EJp">
-                                                            <children>
-                                                                <command title="Item 1" id="kkI-Cc-c3G"/>
-                                                                <command title="Item 2" id="IQH-8g-E7F"/>
-                                                            </children>
-                                                        </menu>
-                                                        <state key="normal" title="Button"/>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-bz-SoY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4J-U1-CYz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yd5-De-eCd">
+                                                                <rect key="frame" x="187" y="0.0" width="166" height="30"/>
+                                                                <menu key="menu" id="bWq-KI-3k8">
+                                                                    <children>
+                                                                        <command title="Item 1" id="WtH-nn-PIX"/>
+                                                                        <command title="Item 2" id="PHP-tK-Nab"/>
+                                                                    </children>
+                                                                </menu>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="VFJ-rN-hro">
+                                                        <rect key="frame" x="0.0" y="30" width="353" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZa-o5-Ptj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgM-7q-g0O">
+                                                                <rect key="frame" x="187" y="0.0" width="166" height="30"/>
+                                                                <menu key="menu" id="tL6-h4-EJp">
+                                                                    <children>
+                                                                        <command title="Item 1" id="kkI-Cc-c3G"/>
+                                                                        <command title="Item 2" id="IQH-8g-E7F"/>
+                                                                    </children>
+                                                                </menu>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJO-rO-0bf">
+                                                <rect key="frame" x="0.0" y="239.00000000000003" width="353" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Generate"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJO-rO-0bf">
-                                        <rect key="frame" x="0.0" y="239.00000000000003" width="353" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Generate"/>
-                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-1J-LtX">
+                                        <rect key="frame" x="0.0" y="353.33333333333337" width="353" height="273.33333333333337"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="rYV-i6-asJ"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="Jih-LG-0oO"/>
+                                    </scrollView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y9u-yj-ETf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Meq-7B-nOb" firstAttribute="centerX" secondItem="fan-ss-ekw" secondAttribute="centerX" id="8nu-id-Ywb"/>
-                            <constraint firstItem="Meq-7B-nOb" firstAttribute="top" secondItem="Y9u-yj-ETf" secondAttribute="top" constant="20" id="dZR-ux-5Bs"/>
-                            <constraint firstAttribute="trailing" secondItem="Meq-7B-nOb" secondAttribute="trailing" constant="20" id="oB4-TL-HKa"/>
-                            <constraint firstItem="Meq-7B-nOb" firstAttribute="leading" secondItem="Y9u-yj-ETf" secondAttribute="leading" constant="20" id="u08-Gg-kCh"/>
+                            <constraint firstAttribute="trailing" secondItem="ls7-7S-AlS" secondAttribute="trailing" constant="20" id="OJ9-Fu-KGt"/>
+                            <constraint firstItem="ls7-7S-AlS" firstAttribute="centerX" secondItem="fan-ss-ekw" secondAttribute="centerX" id="bhK-Tv-1NU"/>
+                            <constraint firstItem="ls7-7S-AlS" firstAttribute="top" secondItem="Y9u-yj-ETf" secondAttribute="top" constant="20" id="eBJ-Q0-Ixr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fitness Recommendations" largeTitleDisplayMode="always" id="yZN-sf-e2e"/>
