@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55318FA72CFB0ED300434826 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 55318FA62CFB0ED300434826 /* Auth */; };
+		55318FA92CFB0ED300434826 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 55318FA82CFB0ED300434826 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		550820D32CE742FF006C4F7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55318FA92CFB0ED300434826 /* Supabase in Frameworks */,
+				55318FA72CFB0ED300434826 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,8 @@
 			);
 			name = wecare;
 			packageProductDependencies = (
+				55318FA62CFB0ED300434826 /* Auth */,
+				55318FA82CFB0ED300434826 /* Supabase */,
 			);
 			productName = wecare;
 			productReference = 550820BC2CE742FE006C4F7F /* wecare.app */;
@@ -208,6 +217,9 @@
 			);
 			mainGroup = 550820B32CE742FE006C4F7F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				55318FA52CFB0ED300434826 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 550820BD2CE742FE006C4F7F /* Products */;
 			projectDirPath = "";
@@ -573,6 +585,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55318FA52CFB0ED300434826 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55318FA62CFB0ED300434826 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55318FA52CFB0ED300434826 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		55318FA82CFB0ED300434826 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55318FA52CFB0ED300434826 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 550820B42CE742FE006C4F7F /* Project object */;
 }

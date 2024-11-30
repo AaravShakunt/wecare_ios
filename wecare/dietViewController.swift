@@ -37,7 +37,8 @@ class dietViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Function to fetch data from EDMAM API
     func fetchRecipeData() {
         // The Recipe API URL
-        let apiURL = "https://api.edamam.com/api/recipes/v2?app_key=f4650c46295b99bcffadb531774729ab&field=uri&field=label&field=image&field=source&field=dietLabels&field=healthLabels&field=cautions&field=ingredientLines&field=calories&health=alcohol-free&health=vegetarian&diet=high-fiber&cuisineType=Indian&imageSize=THUMBNAIL&type=public&app_id=c0de6b55"
+        let diet = "vegetarian"
+        let apiURL = "https://api.edamam.com/api/recipes/v2?app_key=f4650c46295b99bcffadb531774729ab&field=uri&field=label&field=image&field=source&field=dietLabels&field=healthLabels&field=cautions&field=ingredientLines&field=calories&health=alcohol-free&health=\(diet)&diet=high-fiber&cuisineType=Indian&imageSize=THUMBNAIL&type=public&app_id=c0de6b55"
         
         guard let url = URL(string: apiURL) else { return }
         

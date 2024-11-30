@@ -93,7 +93,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                         <connections>
-                                            <segue destination="ecE-TZ-EsO" kind="presentation" modalPresentationStyle="fullScreen" id="GFy-Br-ynh"/>
+                                            <action selector="loginButtonTapped:" destination="l2x-es-9xp" eventType="touchUpInside" id="ZPx-hM-ur9"/>
+                                            <segue destination="ecE-TZ-EsO" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" id="GFy-Br-ynh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -109,6 +110,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="skl-cm-QUO"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="fMk-V7-h7z" id="ZqJ-50-IHE"/>
+                        <outlet property="passwordTextField" destination="elr-4A-1Zs" id="9i8-kc-TaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFY-QY-OxS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,8 +155,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-zH-k3H">
-                                                <rect key="frame" x="93.333333333333343" y="0.0" width="259.66666666666663" height="34.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uv3-zH-k3H">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="114.33333333333334" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SU-Yh-Po7">
+                                                <rect key="frame" x="227.66666666666666" y="0.0" width="73.333333333333343" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-DU-enY">
+                                                <rect key="frame" x="321" y="0.0" width="32" height="34.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -161,6 +177,9 @@
                                         <rect key="frame" x="0.0" y="128.66666666666663" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpButtonTapped:" destination="HF4-qE-Usx" eventType="touchUpInside" id="6LL-ns-sOd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -174,6 +193,11 @@
                             <constraint firstItem="VLw-SS-1GV" firstAttribute="centerX" secondItem="Btc-6Z-dgs" secondAttribute="centerX" id="e5r-41-TKi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Cd8-DU-enY" id="fLd-qK-cia"/>
+                        <outlet property="emailTextField" destination="iMU-HJ-US7" id="PRd-fv-vIM"/>
+                        <outlet property="passwordTextField" destination="uv3-zH-k3H" id="5yu-9d-bai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fl4-Y5-KM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,10 +381,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="ls7-7S-AlS">
-                                <rect key="frame" x="20" y="64" width="353" height="273.33333333333331"/>
+                                <rect key="frame" x="20" y="64" width="353" height="788"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="Meq-7B-nOb">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="273.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="788"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wBW-f8-N1X">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="61"/>
@@ -421,10 +445,44 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJO-rO-0bf">
-                                                <rect key="frame" x="0.0" y="239.00000000000003" width="353" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="239" width="353" height="136"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Generate"/>
+                                                <connections>
+                                                    <action selector="generatePress:" destination="nLj-bu-6qd" eventType="touchUpInside" id="R1V-b9-ah9"/>
+                                                </connections>
                                             </button>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eiA-Y2-Rjj">
+                                                <rect key="frame" x="0.0" y="434" width="353" height="354"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FitnessTableViewCell" rowHeight="84" id="Uui-vX-h5s" customClass="FitnessTableViewCell" customModule="wecare" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="353" height="84"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uui-vX-h5s" id="wcR-4S-s31">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="84"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08q-GY-C6c">
+                                                                    <rect key="frame" x="29.999999999999996" y="12" width="43.666666666666657" height="60"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="08q-GY-C6c" firstAttribute="centerY" secondItem="wcR-4S-s31" secondAttribute="centerY" id="7O4-nJ-sQ7"/>
+                                                                <constraint firstItem="08q-GY-C6c" firstAttribute="leading" secondItem="wcR-4S-s31" secondAttribute="leadingMargin" constant="10" id="Gy5-k9-nPL"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="08q-GY-C6c" secondAttribute="bottom" constant="1" id="fOJ-lv-SDe"/>
+                                                                <constraint firstItem="08q-GY-C6c" firstAttribute="top" secondItem="wcR-4S-s31" secondAttribute="topMargin" constant="1" id="lN3-en-ndW"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="fitLabel" destination="08q-GY-C6c" id="Vh0-yL-fSj"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -436,11 +494,13 @@
                             <constraint firstAttribute="trailing" secondItem="ls7-7S-AlS" secondAttribute="trailing" constant="20" id="OJ9-Fu-KGt"/>
                             <constraint firstItem="ls7-7S-AlS" firstAttribute="centerX" secondItem="fan-ss-ekw" secondAttribute="centerX" id="bhK-Tv-1NU"/>
                             <constraint firstItem="ls7-7S-AlS" firstAttribute="top" secondItem="Y9u-yj-ETf" secondAttribute="top" constant="20" id="eBJ-Q0-Ixr"/>
+                            <constraint firstItem="Y9u-yj-ETf" firstAttribute="bottom" secondItem="ls7-7S-AlS" secondAttribute="bottom" id="ptt-ln-YHX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fitness Recommendations" largeTitleDisplayMode="always" id="yZN-sf-e2e"/>
                     <connections>
                         <outlet property="ExercisePopUp" destination="yd5-De-eCd" id="b4z-xn-j9o"/>
+                        <outlet property="FitTable" destination="eiA-Y2-Rjj" id="Gql-RC-och"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wl-A0-R32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
