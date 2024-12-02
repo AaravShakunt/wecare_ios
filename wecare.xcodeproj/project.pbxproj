@@ -32,6 +32,7 @@
 		550820BC2CE742FE006C4F7F /* wecare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wecare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550820D22CE742FF006C4F7F /* wecareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wecareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		550820DC2CE742FF006C4F7F /* wecareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wecareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		553190532CFCB73600434826 /* ExploreHere.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ExploreHere.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -108,6 +109,13 @@
 				550820BC2CE742FE006C4F7F /* wecare.app */,
 				550820D22CE742FF006C4F7F /* wecareTests.xctest */,
 				550820DC2CE742FF006C4F7F /* wecareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5531905D2CFCB73600434826 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +231,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 550820BD2CE742FE006C4F7F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5531905D2CFCB73600434826 /* Products */;
+					ProjectRef = 553190532CFCB73600434826 /* ExploreHere.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				550820BB2CE742FE006C4F7F /* wecare */,

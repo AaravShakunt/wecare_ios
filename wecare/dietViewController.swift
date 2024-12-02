@@ -4,9 +4,14 @@ class dietViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var SampleLabel: UILabel!
     @IBOutlet weak var nutriTable: UITableView!
+    @IBOutlet weak var preferenceField: UITextField!
     @IBOutlet weak var dietPrefPopUp: UIButton!
     
+    var selectedDiet: String = ""
+    var additionalQuery : String = ""
+    
     @IBAction func generatePress(_ sender: UIButton) {
+        additionalQuery = preferenceField.text ?? ""
         fetchRecipeData()
     }
     var recipes: [RecipeResponse.Recipe] = []
@@ -21,6 +26,12 @@ class dietViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Create the action closure for the pop-up button menu
         let popUpClosure = {(action: UIAction) in
             print(action.title)
+            if action.title == "Non-Vegetarian" {
+                self.selectedDiet = "red-meat-free"
+            }
+            else{
+                self.selectedDiet = action.title.lowercased()
+            }
         }
         
         // Setup menu for the diet preference button
@@ -37,8 +48,7 @@ class dietViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Function to fetch data from EDMAM API
     func fetchRecipeData() {
         // The Recipe API URL
-        let diet = "vegetarian"
-        let apiURL = "https://api.edamam.com/api/recipes/v2?app_key=f4650c46295b99bcffadb531774729ab&field=uri&field=label&field=image&field=source&field=dietLabels&field=healthLabels&field=cautions&field=ingredientLines&field=calories&health=alcohol-free&health=\(diet)&diet=high-fiber&cuisineType=Indian&imageSize=THUMBNAIL&type=public&app_id=c0de6b55"
+        let apiURL = "https://api.edamam.com/api/recipes/v2?app_key=f4650c46295b99bcffadb531774729ab&q=\(additionalQuery)&field=uri&field=label&field=image&field=source&field=dietLabels&field=healthLabels&field=cautions&field=ingredientLines&field=calories&health=alcohol-free&health=\(selectedDiet)&diet=high-fiber&cuisineType=Indian&imageSize=THUMBNAIL&type=public&app_id=c0de6b55"
         
         guard let url = URL(string: apiURL) else { return }
         

@@ -10,7 +10,13 @@ import UIKit
 class fitnessViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var ExercisePopUp: UIButton!
+    @IBOutlet weak var MusclePopUp: UIButton!
     @IBOutlet weak var FitTable : UITableView!
+    
+    // Array to store the fetched exercises
+    var exercises: [Exercise] = []
+    var selectedType : String = ""
+    var selectedMuscle : String = ""
     @IBAction func generatePress(_ sender: UIButton) {
         fetchExerciseData()
     }
@@ -18,17 +24,52 @@ class fitnessViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         FitTable.delegate = self
         FitTable.dataSource = self
+        setExercisePopupButton()
+        setMusclePopupButton()
         // Do any additional setup after loading the view.
     }
     
+    func setExercisePopupButton() {
+        // Create the action closure for the pop-up button menu
+        let popUpClosure = {(action: UIAction) in
+            print(action.title)
+            self.selectedType = action.title.lowercased()
+        }
         
-        // Array to store the fetched exercises
-        var exercises: [Exercise] = []
+        // Setup menu for the diet preference button
+        ExercisePopUp.menu = UIMenu(children: [
+            UIAction(title: "Cardio", handler: popUpClosure),
+            UIAction(title: "Stretching", handler: popUpClosure),
+            UIAction(title: "Strength", handler: popUpClosure)
+        ])
+        
+        // Make the button trigger the menu on primary action (tap)
+        ExercisePopUp.showsMenuAsPrimaryAction = true
+    }
+    func setMusclePopupButton() {
+        // Create the action closure for the pop-up button menu
+        let popUpClosure = {(action: UIAction) in
+            print(action.title)
+            self.selectedMuscle = action.title.lowercased()
+        }
+        
+        // Setup menu for the diet preference button
+        
+        MusclePopUp.menu = UIMenu(children: [
+            UIAction(title: "Abdominals", handler: popUpClosure),
+            UIAction(title: "Neck", handler: popUpClosure),
+            UIAction(title: "Glutes", handler: popUpClosure)
+        ])
+        
+        // Make the button trigger the menu on primary action (tap)
+        MusclePopUp.showsMenuAsPrimaryAction = true
+    }
+        
+        
         
         func fetchExerciseData() {
             // API URL to fetch exercise data
-            let muscle = "biceps"  // You can change this based on the muscle group you want to filter
-            let apiURL = "https://api.api-ninjas.com/v1/exercises?muscle=\(muscle)"
+            let apiURL = "https://api.api-ninjas.com/v1/exercises?muscle=\(selectedMuscle)&type=\(selectedType)"
             
             guard let url = URL(string: apiURL) else { return }
             
